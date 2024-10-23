@@ -3,19 +3,20 @@
  * @return {boolean}
  */
 var containsDuplicate = function(nums) {
-    let k=0
-    let g=nums.sort((a,b)=>a-b)
-    closeloop:
-    for(let i=0;i<g.length;i++){
-        if(g[i]==g[i+1]){
-            k=1
-        break closeloop
-        }   
-    
-    }
-    if(k==1){
-        return true
-    }else{
+    // let num=nums.sort((a,b)=>b-a)
+    // for (let i=0;i<nums.length;i++){
+    //     for(let j=i+1;j<nums.length;j++){
+    //         if(num[i]==num[j]){
+    //             return true
+    //         }
+    //     }
+    // }
+    // return false
+    let num=Array.from(new Set(nums))
+    console.log(num)
+    if(num.length==nums.length){
         return false
+    } else{
+        return true
     }
 };
