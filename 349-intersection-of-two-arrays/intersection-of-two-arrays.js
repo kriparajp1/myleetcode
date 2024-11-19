@@ -4,13 +4,13 @@
  * @return {number[]}
  */
 var intersection = function(nums1, nums2) {
-    let num1=Array.from(new Set(nums1)).map(a=>`${a}`);
-    let num2=Array.from(new Set(nums2)).map(a=>`${a}`)
+    let num1=Array.from(new Set(nums1));
+    let num2=Array.from(new Set(nums2))
     let temp=[]
     for(let i=0;i<num1.length;i++){
         for(let j=0;j<num2.length;j++){
         if(num2[j]==num1[i]){
-            temp.push(Number(num1[i]))
+            temp.push(num1[i])
             continue;
         }
         }
