@@ -15,6 +15,6 @@ var intersection = function(nums1, nums2) {
         }
         }
     }
-    console.log(Array.from(new Set(temp)))
+    
     return Array.from(new Set(temp))
 };
