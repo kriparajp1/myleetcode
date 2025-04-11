@@ -8,7 +8,7 @@ var findFinalValue = function(nums, original) {
     let temp=original;
     for(let i=0;i<nums.length;i++){
         if(sorted[i]===temp){
-            temp=nums[i]*2
+            temp=sorted[i]*2
         }
     }
     return temp;
